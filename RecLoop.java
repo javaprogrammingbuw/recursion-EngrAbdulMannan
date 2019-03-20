@@ -10,7 +10,11 @@ public class RecLoop{
 		System.out.print("Enter a number b   ");
 		int n1 =scan1.nextInt();
 		
-		System.out.println("The gcd number of"+    "="  + powRec(n,n1));
+	System.out.println("The gcd of a number is "+    "="  + euclidRec(n,n1));
+	System.out.println("The power of a number is "+    "="  + powIterative(n,n1));
+	System.out.println("The gcd of a number is "+    "="  + euclid(n,n1));
+	System.out.println("The power number of"+    "="  + powRec(n,n1));
+		
 	}
 	//todo: Look at the given code and try to understand the methods.
 	//The first method euklidRek uses recursion to compute the euclidean algorithm.
@@ -51,7 +55,7 @@ public class RecLoop{
 		 double x=0;
 		 for (int i=0 ; i<Integer.MAX_VALUE; i++) { 
 		 if(a==b) {
-			x=a ;
+			return x=a ;
 		 }
 			 
 		 if (b > a) {
