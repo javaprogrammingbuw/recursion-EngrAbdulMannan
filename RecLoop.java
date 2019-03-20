@@ -1,7 +1,17 @@
 import java.util.Scanner;
 
 public class RecLoop{
-
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a number a   ");
+		int n =scan.nextInt();	
+		
+		Scanner scan1 = new Scanner(System.in);
+		System.out.print("Enter a number b   ");
+		int n1 =scan1.nextInt();
+		
+		System.out.println("The gcd number of"+    "="  + powRec(n,n1));
+	}
 	//todo: Look at the given code and try to understand the methods.
 	//The first method euklidRek uses recursion to compute the euclidean algorithm.
 	//You can look up the algorithm here: https://en.wikipedia.org/wiki/Euclidean_algorithm
@@ -21,6 +31,8 @@ public class RecLoop{
 			return euclidRec(a - b, b);
 		}
 	}
+	 
+
 
     public static double powIterative(final double base, final int n) {
 		if (n < 0) {
@@ -35,4 +47,37 @@ public class RecLoop{
 			return result;
 		}
 	}
+	 public static double euclid(int a ,int b) {
+		 double x=0;
+		 for (int i=0 ; i<Integer.MAX_VALUE; i++) { 
+		 if(a==b) {
+			x=a ;
+		 }
+			 
+		 if (b > a) {
+			 int temp = a;
+				a = b;
+				b = temp;
+			 
+		 }
+		 else {
+			 x=a-b;
+		 }
+	}
+		 return x;
+	 }
+	 public static double powRec(final double base, final int n) { 
+		 if (n < 0) {
+			 return -1;
+			 
+		 }
+		 else if (n==0) {
+			 return 1;
+		 }
+	  else { 
+			return base*powRec(base,n-1);
+			
+}
+		 
+}
 }
